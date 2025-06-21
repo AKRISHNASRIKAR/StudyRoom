@@ -57,7 +57,7 @@ export default function ChatBox({ roomId }) {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="h-80 overflow-y-scroll border rounded p-2 bg-gray-50">
+      <div className="h-80 overflow-y-scroll border rounded p-2 bg-[#212121]">
         {messages.map((msg) => (
           <div key={msg.id} className="mb-2">
             <strong className="text-blue-600">{msg.user_name}:</strong>{" "}
@@ -69,7 +69,7 @@ export default function ChatBox({ roomId }) {
       <input
         type="text"
         placeholder="Type a message..."
-        className="border px-3 py-2 rounded w-full"
+        className="border border-amber-950 px-3 py-2 rounded w-full "
         value={newMsg}
         onChange={(e) => setNewMsg(e.target.value)}
         onKeyDown={(e) => e.key === "Enter" && sendMessage()}
